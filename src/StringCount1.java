@@ -11,7 +11,6 @@ import java.util.Locale;
 
 public class StringCount1 {
     public static void main(String[] args) {
-
          String s = "The_Stealth_Warrior";
          List<Character> m1 = new ArrayList<>();
         for (char ch : s.toCharArray()) {

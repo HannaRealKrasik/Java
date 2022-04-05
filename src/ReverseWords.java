@@ -4,7 +4,6 @@
 "This is an example!" ==> "sihT si na !elpmaxe"
       "double  spaces"      ==> "elbuod  secaps"
  */
-
 public class ReverseWords {
     public static String reverseWords(final String original) {
         StringBuilder done = new StringBuilder();
@@ -19,12 +18,10 @@ public class ReverseWords {
             return original;
         }
         done.deleteCharAt(done.length() - 1);
-
         return done.toString();
     }
 
     public static void main(String[] args) {
-
         System.out.println(reverseWords("      "));
     }
 }
