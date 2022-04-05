@@ -20,7 +20,6 @@ public class ReverseWords {
         done.deleteCharAt(done.length() - 1);
         return done.toString();
     }
-
     public static void main(String[] args) {
         System.out.println(reverseWords("      "));
     }

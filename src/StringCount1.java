@@ -7,7 +7,6 @@ Examples
 "The_Stealth_Warrior" gets converted to "TheStealthWarrior"*/
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class StringCount1 {
     public static void main(String[] args) {
