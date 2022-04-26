@@ -1,10 +1,9 @@
 package Employe;
 
-public class MonthUtils extends Month {
+public class MonthUtils  {
 
-    public MonthUtils(String nameMonth, int kolvoDays, int kolvoRabDays) {
-        super(nameMonth, kolvoDays, kolvoRabDays);
-    }
+
+
    static Month p1 = new Month("Jun", 31, 21);
    static Month p2 = new Month("Feb", 30, 20);
   static   Month p3 = new Month("Mar", 31, 21);

@@ -1,6 +1,6 @@
 package Employe;
 
-public class Manager {
+public class Manager extends Employee {
     private String name;
     private int age;
     private char gender;
@@ -48,7 +48,7 @@ public class Manager {
     }
 
     public Manager( String name, int age, char gender, int salaryDay, int kolvoEmploe) {
-       // super(name, age, gender, salaryDay);
+        super(name, age, gender, salaryDay);
         this.salaryDay = salaryDay;
         this.name = name;
         this.age = age;
@@ -56,15 +56,10 @@ public class Manager {
         this.kolvoEmploe = kolvoEmploe;
     }
 
-
-    public int[] getSalary(Month[] monthArray) {
-        int [] salaryMonth = new int [monthArray.length];
-        for(int i = 0; i < monthArray.length; i++) {
-            salaryMonth[i] = monthArray[i].getKolvoRabDays() * getSalaryDay();
-        }
-       int [] salaryMonthMan = new int [monthArray.length];
-        for(int i = 0; i <monthArray.length; i++)
-         salaryMonthMan[i] = (monthArray[i].getKolvoRabDays() * kolvoEmploe /100 * getSalaryDay()) + monthArray[i].getKolvoRabDays()*getSalaryDay() ;
+@Override
+    public int getSalary(Month[] monthArray) {
+        int  salaryMonth = 0;
+       salaryMonth = super.getSalary(monthArray) + (super.getSalary(monthArray)* kolvoEmploe /100 );
         return salaryMonth ;
 
    }

@@ -44,10 +44,10 @@ public class Employee {
         this.gender = gender;
     }
 
-     public int[] getSalary(Month[] monthArray){
-        int [] salaryMonth = new int [monthArray.length];
+     public int getSalary(Month [] monthArray){
+        int salaryMonth = 0;
         for(int i = 0; i < monthArray.length; i++){
-           salaryMonth[i] = monthArray[i].getKolvoRabDays() * getSalaryDay();
+           salaryMonth += monthArray[i].getKolvoRabDays() * getSalaryDay();
         }return salaryMonth;
      }
 
