@@ -27,7 +27,7 @@ public class StringCount1 {
             sb.append(chr);
         }
             System.out.print(sb.toString());
-    }
+         }
     }
 
 

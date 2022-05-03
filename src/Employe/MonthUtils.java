@@ -2,8 +2,6 @@ package Employe;
 
 public class MonthUtils  {
 
-
-
    static Month p1 = new Month("Jun", 31, 21);
    static Month p2 = new Month("Feb", 30, 20);
   static   Month p3 = new Month("Mar", 31, 21);

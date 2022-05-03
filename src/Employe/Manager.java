@@ -61,7 +61,6 @@ public class Manager extends Employee {
         int  salaryMonth = 0;
        salaryMonth = super.getSalary(monthArray) + (super.getSalary(monthArray)* kolvoEmploe /100 );
         return salaryMonth ;
-
    }
 }
 
