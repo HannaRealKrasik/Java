@@ -1,6 +1,11 @@
 package apexsystem.phoneBill;
 
 public class CalculateBill {
+    private int chargeOver = 25;
+    private double plan;
+    private double alodeMin;
+    private int id;
+    private double usedMin;
 
     public CalculateBill() {
         id = 0;
@@ -15,13 +20,6 @@ public class CalculateBill {
         this.id = id;
         this.usedMin = usedMin;
     }
-
-    private double tax = 15;
-    private int chargeOver;
-    private double plan;
-    private double alodeMin;
-    private int id;
-    private double usedMin;
 
     public void setUsedMin(double usedMin) {
         this.usedMin = usedMin;
@@ -39,10 +37,6 @@ public class CalculateBill {
         return id;
     }
 
-    public double getTax() {
-        return tax;
-    }
-
     public int getChargeOver() {
         return chargeOver;
     }
@@ -53,10 +47,6 @@ public class CalculateBill {
 
     public double getAlodeMin() {
         return alodeMin;
-    }
-
-    public void setTax(double tax) {
-        this.tax = tax;
     }
 
     public void setChargeOver(int chargeOver) {
@@ -71,16 +61,19 @@ public class CalculateBill {
         this.alodeMin = alodeMin;
     }
 
-    public static double getOverage(double overMin) {
-        return overMin * chargeOver / 100.0;
+    public double getOverage() {
+        if(usedMin <= alodeMin)
+            return 0;
+        double overMin = usedMin - alodeMin;
+        return overMin * chargeOver  / 100.0;
     }
 
-    public static double getTax(double plan, double overMin) {
-        return (plan + getOverage(overMin)) * tax / 100.0;
+    public  double getTax() {
+        return (plan + getOverage()) * 15 / 100.0;
     }
 
-    public static double getTotalFoPay(double plan, double overMin) {
-        return plan + getOverage(overMin) + getTax(plan, overMin);
+    public double getTotalFoPay() {
+        return plan + getOverage() + getTax();
     }
 
 }
