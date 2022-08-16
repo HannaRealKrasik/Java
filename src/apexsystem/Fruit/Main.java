@@ -7,7 +7,6 @@ public class Main {
         System.out.println(ban.getCalories());
         ban.makeJuice();
         squuze(ban);
-
         ban = new Apple(6);
         ban.makeJuice();
         squuze(ban);
@@ -18,5 +17,4 @@ public class Main {
         }
         else System.out.println("Apple and other");
     }
-
 }

@@ -9,7 +9,6 @@ public class Banana extends Fruit{
 
     public void Peel(){
         System.out.println("Peel");
-
     }
     @Override
     public void makeJuice(){

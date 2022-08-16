@@ -67,7 +67,6 @@ public class CalculateBill {
         double overMin = usedMin - alodeMin;
         return overMin * chargeOver  / 100.0;
     }
-
     public  double getTax() {
         return (plan + getOverage()) * 15 / 100.0;
     }
